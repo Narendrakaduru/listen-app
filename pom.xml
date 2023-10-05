@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.listen</groupId>
-	<artifactId>Listen</artifactId>
+	<artifactId>listen-app</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Listen</name>
 	<description>Spring Boot Crud Operation</description>
