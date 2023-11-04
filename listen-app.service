@@ -1,0 +1,16 @@
+[Unit]
+Description=listen-app java service
+
+[Service]
+WorkingDirectory=/home/nani/listen-app/target
+ExecStart=/usr/bin/java -jar listen-app.jar
+User=nani
+Group=nani
+SuccessExitStatus=143
+Restart=on-failure
+RestartSec=5
+SyslogIdentifier=listen-app
+Environment="SERVER_PORT=6702"
+
+[Install]
+WantedBy=multi-user.target
