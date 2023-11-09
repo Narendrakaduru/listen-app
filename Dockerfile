@@ -1,4 +1,6 @@
-FROM mdsol/java17-jre:latest
-ADD target/listen-app-0.0.1-SNAPSHOT.jar listen-app.jar
+FROM alpine:latest
+RUN apk --no-cache add openjdk17-jdk
 EXPOSE 6702
-ENTRYPOINT ["java","-jar","listen-app.jar","&"]
+COPY target/listen-app-0.0.1-SNAPSHOT.jar /app/listen-app.jar
+WORKDIR /app
+ENTRYPOINT ["java", "-jar", "listen-app.jar"]
